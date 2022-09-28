@@ -1,2 +1,2 @@
 venv/
-app/models/**
+app/models/*.h5
