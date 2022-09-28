@@ -1,4 +1,4 @@
-# coccidiocis-detector
+# Coccidiosis Detector
 
 Everything packaged in docker with requirement.txt, so you can push it to any docker hosted cloud service. Enjoy :)
 
