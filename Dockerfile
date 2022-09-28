@@ -9,8 +9,6 @@ RUN pip install --upgrade -r requirements.txt
 
 COPY app app/
 
-COPY models models/
-
 RUN python app/server.py
 
 EXPOSE 8080
