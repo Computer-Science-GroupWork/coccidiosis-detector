@@ -64,13 +64,14 @@ def model_predict(img_path, model, bool_api=False):
     label = "Coccidiosis" if cocci > healthy else "Healthy"
     color = "red" if cocci > healthy else "green"
     accuracy = max(cocci, healthy)
+    other = min(cocci, healthy)
     if not bool_api:
         result_html1 = path/'static'/'result1.html'
         result_html2 = path/'static'/'result2.html'
         result_html = str(result_html1.open().read() + '<span style=\"color: ' + color + ';\">' + label + '</span>' + ' at <span style=\"color: blue;\">' + str(round(accuracy*100, 2)) + '%</span> accuracy' + result_html2.open().read())
         return HTMLResponse(result_html)
     else:
-        return JSONResponse({ 'label': label, 'accuracy': float(accuracy), 'code': 1 if cocci > healthy else 0})
+        return JSONResponse({ 'label': label, 'accuracy': float(accuracy), 'other': float(other), 'code': 1 if cocci > healthy else 0})
 
 @app.route("/")
 def form(request):
