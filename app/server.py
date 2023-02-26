@@ -11,7 +11,7 @@ import uvicorn, aiohttp, asyncio
 import sys, numpy as np
 
 path = Path(__file__).parent
-model_file_url = 'https://www.4sync.com/web/directDownload/PBlz3_Fa/f8Iqpe3-.0ec48e7e5a97cd110f45b835992abe82'
+model_file_url = 'https://www.4sync.com/web/directDownload/gm-gw6hO/AbeXelpS.1760fb7ca3ca39780d33deb44b06b4cf'
 model_file_name = 'chickens'
 
 app = Starlette()
